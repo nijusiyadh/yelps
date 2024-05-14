@@ -25,7 +25,7 @@ body {
     background: url(/assets/images/o.jpg);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100%;
+    background-size: cover;
 }
 
 header {
@@ -47,8 +47,8 @@ header {
 
 .logo {
    min-width: 10%;
-    margin-right: 30px;
-    width: 265px;
+    
+    width: 17%;
 }
 
 .logo a{
@@ -66,7 +66,7 @@ header {
 }
 
 .search-bar {
-    width: 51%;
+    width: 52%;
     display: flex;
     height: 48px;
     
@@ -160,25 +160,32 @@ header {
 }
 
 .header-bottom {
-    width: 100%;
+   
     height: 58px;
-    padding: 0px 0px 0px 26.5px;
-    margin-left: 17.5%;
+    padding-left: 5%;
+    
     display: flex;
     align-items: center;
     justify-content: start;
+    margin-left: 10%;
 }
 
 .header-bottom ul {
     display: flex;
+    flex-basis: 1;
+    
 }
 
 .header-bottom ul li {
     list-style: none;
 }
 
+
 .header-bottom ul li a {
     padding: 16px 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-bottom ul li a span {
@@ -186,15 +193,29 @@ header {
     color: #fff;
 }
 
+.header-bottom ul li a span i {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+
+
+@media screen and (max-width:1280px) {
+    .header-bottom {
+        padding-left: 5%;
+    }
+}
+
 
 /* --------------banner-content-------------- */
 
 
 .banner-content {
-    width: 100%;
-    margin: 0px 215px;
+    max-width: 1204px;
+    margin: auto;
     padding: 0px 40px;
     height: 552px;
+    box-sizing: border-box;
     
 }
 
@@ -235,7 +256,22 @@ header {
     width: 480px;
     position: absolute;
     top: 3px;
-    left: 50px;
+    left: 40px;
+}
+
+.content-text button {
+    padding: 12px 32px;
+    font-size: 16px;
+    margin: 1px 0p 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9px;
+}
+
+.content-text button i {
+    font-size: 24px;
+    margin-right: 10px;
 }
 
 .content-text h1 {
@@ -245,5 +281,165 @@ header {
 }
 
 .discription {
+    position: absolute;
+    left: 2px;
+    bottom: -140px;
+}
+
+.discription a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.discription p {
+    color: #fff;
+    font-size: 14px;
     
+}
+
+
+
+/* --------main------------- */
+
+.main {
+    width: 1144px;
+    padding: 0px 40px;
+    margin: auto;
+    height: 2000px;
+}
+
+.activity {
+    width: 100%;
+    padding: 56px 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.activity h2 {
+    display: block;
+    font-size: 28px;
+    font-family: var(--font-pop);
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 24px;
+    grid-auto-rows: auto;
+}
+
+.grid-e1 {
+    
+    grid-column: span 4;
+    
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(247, 223, 223);
+    border-radius: 5px;
+}
+
+.avathar {
+    padding: 16px 16px 0px;
+    flex-basis: 1;
+    display: flex;
+    gap: 8px;
+    padding-bottom: 16px;
+}
+
+.img-avathar {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: aliceblue;
+}
+
+.avathar-name p {
+    display: block;
+}
+
+.avathar-name .name {
+    font-size: 14px;
+}
+
+.avathar-name .time {
+    font-size: 12px;
+    color: gray;
+}
+
+.grid-element-img-banner {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-element-img-banner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.grid-element-content {
+    padding: 16px;
+}
+
+.grid-content-title {
+    font-size: 16px;
+    font-family: var(--font-pop);
+    display: block;
+    font-weight: bold;
+}
+
+.grid-content-dis {
+    font-size: 14px;
+
+}
+
+.readme span {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(58, 133, 133);
+}
+
+.comment {
+    width: 100%;
+    padding: 0px 16px;
+}
+
+.comment-icons {
+    width: 100%;
+    padding: 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgb(155, 144, 144);
+}
+
+.icon-conti{
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment-icons i {
+    font-size: 24px;
+}
+
+.grid-e2 {
+    height: auto;
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(247, 223, 223);
+    border-radius: 5px;
+    min-height: 400px;
 }
